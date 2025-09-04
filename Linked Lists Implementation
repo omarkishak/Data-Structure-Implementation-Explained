@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+/*frist we create a class to generate nodes, every nod is just a space in the memory
+ that holds value and holds an address to another node */
+class Node {
+public:
+    double val;
+    Node* next;
+};
+
+int main() {
+    /* this is how we intialize nodes*/
+    Node* head = new Node();
+    Node* node1 = new Node();
+
+    /*how to store a value into them and store what are they pointing at*/
+    head-> val = 4.5;
+    head->next = node1;
+
+    node1-> val = 4.6;
+    node1->next = nullptr;
+
+    /*output demonstration*/
+    cout << head << endl << node1 << endl << head->val << endl << node1->val << endl << head->next << endl << node1->next;
+    return 0;
+}
